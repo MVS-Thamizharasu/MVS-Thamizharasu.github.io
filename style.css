@@ -1,0 +1,555 @@
+/* ==========================
+   Google Font
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================
+   Reset & Text Selection
+========================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::selection{
+    background: #8b5cf6;
+    color: white;
+}
+
+/* ==========================
+   Body & Premium Background
+========================== */
+body{
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, #24164f 0%, #080b18 45%), #080b18;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #080b18;
+}
+::-webkit-scrollbar-thumb {
+    background: #8b5cf6;
+    border-radius: 10px;
+}
+
+/* ==========================
+   Background Blur Glows
+========================== */
+.bg-blur{
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: .35;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.blur1{
+    background: #7b2cff;
+    top: -120px;
+    left: -120px;
+}
+
+.blur2{
+    background: #2a9dff;
+    bottom: -120px;
+    right: -120px;
+}
+
+/* ==========================
+   Navbar & Logo Hover
+========================== */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 9%;
+    background: rgba(15, 15, 25, .65);
+    backdrop-filter: blur(12px);
+    z-index: 999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo h2{
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.logo h2:hover{
+    color: #8b5cf6;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 16px;
+    transition: .35s;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background: #8b5cf6;
+    border-radius: 2px;
+}
+
+/* ==========================
+   Hero Section & Title Size
+========================== */
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 9% 60px;
+    gap: 70px;
+}
+
+.hero-left{
+    flex: 1;
+}
+
+.hero-left h3{
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.hero-left h1{
+    font-size: 68px;
+    font-weight: 800;
+    margin-top: 5px;
+    line-height: 1.1;
+}
+
+.hero-left span{
+    color: #8b5cf6;
+}
+
+.hero-left h2{
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.hero-left p{
+    margin-top: 20px;
+    line-height: 1.7;
+    color: #94a3b8;
+    max-width: 550px;
+    font-size: 16px;
+}
+
+/* ==========================
+   Hero Buttons Font & Hover
+========================== */
+.hero-buttons{
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background: #8b5cf6;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .35s;
+}
+
+.btn-primary:hover{
+    background: #7c3aed;
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+}
+
+.btn-secondary{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: .35s;
+}
+
+.btn-secondary:hover{
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 35px;
+    display: flex;
+    gap: 25px;
+}
+
+.social-icons a {
+    color: #64748b;
+    font-size: 22px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ==========================
+   Profile Image, Glow & Float
+========================== */
+.hero-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card{
+    width: 400px;
+    height: 460px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+}
+
+.profile-card::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #8b5cf655, transparent);
+    filter: blur(60px);
+    z-index: -1;
+}
+
+.profile-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ==========================
+   Sections Layout & Gap
+========================== */
+section{
+    padding: 110px 9%;
+}
+
+section h2{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.line{
+    width: 45px;
+    height: 3px;
+    background: #8b5cf6;
+    margin: 0 auto 35px;
+    border-radius: 10px;
+}
+
+/* ==========================
+   About Section
+========================== */
+.about p{
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8;
+    color: #94a3b8;
+    font-size: 16px;
+}
+
+/* ==========================
+   Education & Glass Effect
+========================== */
+.education-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.edu-card{
+    backdrop-filter: blur(15px);
+    background: rgba(17, 20, 34, .75);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: .35s;
+}
+
+.edu-card:hover{
+    border-color: rgba(139, 92, 246, 0.3);
+    transform: translateY(-3px);
+}
+
+.edu-card h3{
+    color: #8b5cf6;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.edu-card h4{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.edu-card p{
+    color: #94a3b8;
+    font-size: 14.5px;
+}
+
+.edu-card span{
+    display: block;
+    margin-top: 10px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* ==========================
+   Projects & Glass Effect
+========================== */
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card{
+    backdrop-filter: blur(15px);
+    background: rgba(17, 20, 34, .75);
+    padding: 35px 25px;
+    border-radius: 12px;
+    text-align: left;
+    transition: .35s;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.project-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.15);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.project-card i{
+    font-size: 32px;
+    color: #8b5cf6;
+    margin-bottom: 15px;
+    transition: .4s;
+}
+
+.project-card:hover i{
+    transform: scale(1.2);
+}
+
+.project-card h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-card p{
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ==========================
+   Contact & Hover Animation
+========================== */
+.contact-box{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-box a{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #111422;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: .35s;
+}
+
+.contact-box a:hover{
+    border-color: #8b5cf6;
+    background: transparent;
+    transform: translateY(-5px);
+}
+
+.contact-box a i {
+    color: #8b5cf6;
+}
+
+/* ==========================
+   Footer Section
+========================== */
+footer{
+    text-align: center;
+    padding: 40px 9%;
+    background: transparent;
+    color: #64748b;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer p{
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* ==========================
+   Fade-in Animation (Observer)
+========================== */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================
+   Responsive UI Adaptability
+========================== */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 50px;
+        padding-top: 140px;
+    }
+
+    .hero-left h1 {
+        font-size: 48px;
+    }
+
+    .hero-left h2 {
+        font-size: 18px;
+    }
+
+    .hero-left p {
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .hero-buttons,
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .profile-card {
+        width: 300px;
+        height: 350px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-left h1 {
+        font-size: 38px;
+    }
+
+    .hero-left h3 {
+        font-size: 22px;
+    }
+
+    .hero-left h2 {
+        font-size: 16px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-container {
+        gap: 15px;
+    }
+}
