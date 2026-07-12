@@ -102,6 +102,9 @@ body{
 }
 
 .nav-links a{
+    display: flex;
+    align-items: center;
+    gap: 6px;
     text-decoration: none;
     color: #94a3b8;
     font-size: 16px;
@@ -110,8 +113,12 @@ body{
     padding-bottom: 5px;
 }
 
+.nav-links a i{
+    font-size: 14px;
+}
+
 .nav-links a:hover,
-.nav-links a.active {
+.nav-links a.active{
     color: #ffffff;
 }
 
