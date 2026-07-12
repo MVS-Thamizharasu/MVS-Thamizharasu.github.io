@@ -352,12 +352,17 @@ section h2{
     margin-bottom: 5px;
 }
 
+.edu-card h3 i{
+    color: #8b5cf6;
+    margin-right: 10px;
+    font-size: 22px;
+}
+
 .edu-card h4{
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 8px;
 }
-
 .edu-card p{
     color: #94a3b8;
     font-size: 14.5px;
