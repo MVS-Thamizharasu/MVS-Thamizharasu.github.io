@@ -438,7 +438,13 @@ section h2{
     gap: 20px;
     flex-wrap: wrap;
 }
-
+.contact-text{
+    text-align: center;
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
 .contact-box a{
     display: inline-flex;
     align-items: center;
