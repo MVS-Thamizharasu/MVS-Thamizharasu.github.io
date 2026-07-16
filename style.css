@@ -606,16 +606,33 @@ footer p{
 }
 
 @media (max-width: 576px) {
+    .hero{
+        padding:100px 20px 40px;
+        gap:25px;
+    }
+
+    .profile-card{
+        width:220px;
+        height:270px;
+    }
+
     .hero-left h1 {
-        font-size: 38px;
+        font-size: 34px;
+       line-height:1.1;
     }
 
     .hero-left h3 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .hero-left h2 {
-        font-size: 16px;
+        font-size: 15px;
+        margin-top:15px;
+    }
+    .hero-left p{
+        font-size:15px;
+        line-height:1.7;
+        margin-top:15px;
     }
 
     .btn-primary,
@@ -635,10 +652,6 @@ footer p{
 
     .education-container {
         gap: 15px;
-    }
-   .profile-card{
-        width:250px;
-        height:300px;
     }
 
 }
