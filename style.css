@@ -94,6 +94,28 @@ body{
 .logo h2:hover{
     color: #8b5cf6;
 }
+/* ==========================
+   Logo Image
+========================== */
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+    transition: .3s ease;
+}
+
+.logo img:hover{
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 10px #8b5cf6);
+}
 
 .nav-links{
     display: flex;
