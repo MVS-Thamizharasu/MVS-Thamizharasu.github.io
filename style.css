@@ -554,11 +554,12 @@ footer p{
     .nav-links{
         position:fixed;
         top:0;
-        right:-100%;
+        right:-280%;
         width:280px;
         height:100vh;
         background:rgba(15,15,25,.98);
         backdrop-filter:blur(15px);
+       
         display:flex;
         flex-direction:column;
         justify-content:center;
