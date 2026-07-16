@@ -121,3 +121,36 @@ if (typing) {
 // Console Message
 // ==========================
 console.log("Welcome to Thamizharasu Portfolio 🚀");
+
+// ==========================
+// Mobile Menu Toggle
+// ==========================
+
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".nav-links");
+const menuIcon = document.querySelector(".menu-toggle i");
+
+if (menuToggle && mobileMenu) {
+
+    menuToggle.addEventListener("click", () => {
+
+        mobileMenu.classList.toggle("active");
+
+        if (mobileMenu.classList.contains("active")) {
+            menuIcon.classList.replace("fa-bars", "fa-xmark");
+        } else {
+            menuIcon.classList.replace("fa-xmark", "fa-bars");
+        }
+
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("active");
+            menuIcon.classList.replace("fa-xmark", "fa-bars");
+
+        });
+    });
+
+}
