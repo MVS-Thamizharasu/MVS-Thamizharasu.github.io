@@ -205,8 +205,11 @@ body{
 }
 
 .btn-primary:hover{
-    background: #7c3aed;
-    box-shadow: 0 0 25px rgba(139, 92, 246, 0.6);
+   background: #7c3aed;
+   transform:translateY(-4px);
+   box-shadow:
+      0 0 25px rgba(139, 92, 246, 0.6);
+      0 0 40px rgba(139,92,246,.35);
 }
 
 .btn-secondary{
@@ -226,6 +229,9 @@ body{
 .btn-secondary:hover{
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.3);
+    transform:translateY(-4px);
+    box-shadow:
+        0 0 20px rgba(139,92,246,.25);
 }
 
 /* Social Icons */
@@ -264,7 +270,11 @@ body{
     align-items: center;
     justify-content: center;
     position: relative;
+    border-radius:20px;
     animation: float 4s ease-in-out infinite;
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45),
+        0 0 35px rgba(139,92,246,.25);
 }
 
 .profile-card::before{
