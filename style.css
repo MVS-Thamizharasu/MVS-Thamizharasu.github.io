@@ -504,19 +504,22 @@ section h2{
 /* ==========================
    Footer Section
 ========================== */
-footer{
-    text-align: center;
-    padding: 40px 9%;
-    background: transparent;
-    color: #64748b;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+.footer{
+    text-align:center;
+    padding:30px 20px;
+    border-top:1px solid rgba(255,255,255,.08);
 }
 
-footer p{
-    font-size: 14px;
-    margin: 5px 0;
+.footer p{
+    margin:8px 0;
+    font-size:14px;
+    color:#94a3b8;
 }
 
+.footer strong{
+    color:#8b5cf6;
+    font-weight:600;
+}
 /* ==========================
    Fade-in Animation (Observer)
 ========================== */
