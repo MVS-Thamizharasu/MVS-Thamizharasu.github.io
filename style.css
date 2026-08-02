@@ -464,6 +464,46 @@ section h2{
 }
 
 /* ==========================
+   Skills Section
+========================== */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.skill-card{
+    background:rgba(17,20,34,.75);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.05);
+    border-radius:12px;
+    padding:30px;
+    text-align:center;
+    transition:.35s ease;
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
+    border-color:#8b5cf6;
+    box-shadow:0 10px 25px rgba(139,92,246,.15);
+}
+
+.skill-card h3{
+    color:#ffffff;
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.skill-card small{
+    display:block;
+    color:#94a3b8;
+    font-size:14px;
+    font-weight:500;
+}
+
+/* ==========================
    Contact & Hover Animation
 ========================== */
 .contact-text{
