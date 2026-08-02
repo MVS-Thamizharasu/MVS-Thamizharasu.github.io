@@ -489,7 +489,11 @@ section h2{
     border-color:#8b5cf6;
     box-shadow:0 10px 25px rgba(139,92,246,.15);
 }
-
+.skill-card i{
+    font-size:42px;
+    color:#8b5cf6;
+    margin-bottom:18px;
+}
 .skill-card h3{
     color:#ffffff;
     font-size:20px;
