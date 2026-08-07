@@ -675,6 +675,10 @@ section h2{
     }
 }
 
+/* ==========================
+   Mobile Responsive Layout
+========================== */
+
 @media (max-width: 576px) {
     .hero{
         padding:100px 20px 40px;
@@ -704,7 +708,12 @@ section h2{
         line-height:1.7;
         margin-top:15px;
     }
-
+   
+ .hero-buttons{
+        flex-direction:column;
+        gap:15px;
+      }
+   
     .btn-primary,
     .btn-secondary {
         width: 100%;
@@ -718,6 +727,10 @@ section h2{
 
     .project-grid {
         grid-template-columns: 1fr;
+    }
+
+   .skills-grid{
+        grid-template-columns:1fr;
     }
 
     .education-container {
