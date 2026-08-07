@@ -796,7 +796,8 @@ section h2{
     }
 
 }
-    @media (max-width:480px){
+
+@media (max-width:480px){
 
     .profile-card{
         width:210px;
