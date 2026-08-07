@@ -697,7 +697,7 @@ section h2{
     .hero{
         flex-direction: column-reverse;
         text-align: center;
-        padding:100px 20px 40px;
+        padding:90px 20px 40px;
         gap:35px;
     }
 
@@ -709,10 +709,6 @@ section h2{
     .hero-left h1 {
         font-size: 36px;
        line-height:1.1;
-    }
-
-    .hero-left h3 {
-        font-size: 20px;
     }
 
     .hero-left h2 {
@@ -785,7 +781,7 @@ section h2{
     }
 
     section h2{
-       font-size:26px;
+       font-size:28px;
     }
     .certifications .project-card{
         padding:20px;
