@@ -679,7 +679,7 @@ section h2{
    Mobile Responsive Layout
 ========================== */
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .hero{
         flex-direction: column-reverse;
         text-align: center;
@@ -764,7 +764,24 @@ section h2{
     section h2{
        font-size:26px;
     }
+    .certifications .project-card{
+        padding:20px;
+    }
 
+    .certifications .project-card h3{
+        font-size:17px;
+        line-height:1.4;
+    }
+
+    .certifications .project-card p{
+        font-size:13px;
+        margin:10px 0 16px;
+    }
+
+    .certifications .btn-primary{
+        width:100%;
+        padding:12px;
+    }
     .line{
         margin:0 auto 25px;
     }
@@ -777,5 +794,39 @@ section h2{
         font-size:13px;
         line-height:1.7;
     }
+
+}
+    @media (max-width:480px){
+
+    .profile-card{
+        width:210px;
+        height:255px;
+    }
+
+    .hero-left h1{
+        font-size:32px;
+    }
+
+    .hero-left h2{
+        font-size:14px;
+    }
+
+    .hero-left p{
+        font-size:14px;
+    }
+
+     .hero-buttons{
+         gap:12px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        padding:12px 16px;
+        font-size:14px;
+    }
+
+    .contact-box a{
+        max-width:100%;
+    } 
 
 }
