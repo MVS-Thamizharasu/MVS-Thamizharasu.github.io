@@ -554,17 +554,14 @@ section h2{
     gap: 10px;
 
     min-width:180px;
-    padding:15px 24px;
+    padding:14px 24px;
    
     background: #111422;
     color:#ffffff;
     text-decoration: none;
 
     border:1px solid rgba(255,255,255,.08);
-    border-radius:10px;
-   
-    padding: 14px 24px;
-    border-radius: 8px;
+    border-radius:8px;
     
     font-size:15px;
     font-weight: 600;
