@@ -681,17 +681,19 @@ section h2{
 
 @media (max-width: 576px) {
     .hero{
+        flex-direction: column-reverse;
+        text-align: center;
         padding:100px 20px 40px;
-        gap:25px;
+        gap:35px;
     }
 
     .profile-card{
-        width:220px;
-        height:270px;
+        width:240px;
+        height:290px;
     }
 
     .hero-left h1 {
-        font-size: 34px;
+        font-size: 36px;
        line-height:1.1;
     }
 
@@ -705,14 +707,21 @@ section h2{
     }
     .hero-left p{
         font-size:15px;
-        line-height:1.7;
-        margin-top:15px;
+        line-height:1.8;
+        margin:15px auto 25px;
+        max-width:100%;
     }
    
- .hero-buttons{
+    .hero-buttons{
         flex-direction:column;
         gap:15px;
-      }
+    }
+   
+    .social-icons{
+       justify-content:center;
+       gap:20px;
+       margin-top:25px;
+    }
    
     .btn-primary,
     .btn-secondary {
@@ -724,17 +733,49 @@ section h2{
         flex-direction: column;
         align-items: center;
     }
+    .contact-box a{
+       width:100%;
+       max-width:280px;
+       justify-content:center;
+    }
 
     .project-grid {
         grid-template-columns: 1fr;
     }
 
-   .skills-grid{
+    .certifications-grid{
+         grid-template-columns:1fr;
+         gap:18px;
+    }
+
+    .skills-grid{
         grid-template-columns:1fr;
+        gap:18px;
     }
 
     .education-container {
         gap: 15px;
+    }
+
+    section{
+        padding:70px 20px;
+    }
+
+    section h2{
+       font-size:26px;
+    }
+
+    .line{
+        margin:0 auto 25px;
+    }
+
+    .footer{
+        padding:25px 15px;
+    }
+
+    .footer p{
+        font-size:13px;
+        line-height:1.7;
     }
 
 }
