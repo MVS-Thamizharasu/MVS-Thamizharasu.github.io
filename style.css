@@ -481,39 +481,92 @@ section h2{
    Skills Section
 ========================== */
 
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(25,1fr);
-    column-gap:70px;
-    margin:40px auto 0;
-    row-gap:28px;
-}
 
-.skill-item{
+.skills-grid-3d{
     display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:24px;
+    max-width:1000px;
+    margin:40px auto 0;
+    perspective:1000px;
+}
+
+.card-3d{
+    flex:0 0 calc((100% - 48px) / 3);
+    max-width:300px;
+    min-width:260px;
+    height:220px;
+    perspective:1000px;
+}
+
+.card-3d-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+
+    background:rgba(17,20,34,.75);
+    backdrop-filter:blur(15px);
+
     border:1px solid rgba(255,255,255,.08);
-    padding:12px 0;
+    border-radius:16px;
+
+    padding:30px 20px;
+    text-align:center;
+
+    transform-style:preserve-3d;
+
+    transition:
+        transform .5s cubic-bezier(.23,1,.32,1),
+        box-shadow .5s ease,
+        border-color .5s ease;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+
+    display:flex;
+    flex-direction:column;
     align-items:center;
-    justify-content:space-between;
+    justify-content:center;
 }
 
-.skill-item span{
+.card-3d:hover .card-3d-inner{
+    transform:rotateX(12deg) rotateY(-12deg) translateZ(20px);
+    border-color:#8b5cf6;
+    box-shadow:
+        -15px 20px 35px rgba(139,92,246,.25),
+        0 0 20px rgba(139,92,246,.35);
+}
+
+.card-3d-inner i{
+    font-size:42px;
+    color:#8b5cf6;
+    margin-bottom:15px;
+    transform:translateZ(40px);
+    transition:transform .4s ease,color .4s ease;
+}
+
+.card-3d:hover .card-3d-inner i{
     color:#ffffff;
-    font-size:16px;
-    font-weight:500;
+    transform:translateZ(55px) scale(1.1);
 }
 
-.skill-item small{
-    color:#94a3b8;
+.card-3d-inner h3{
+    color:#ffffff;
+    font-size:18px;
+    font-weight:600;
+    margin:0 0 8px;
+    transform:translateZ(30px);
+}
+
+.card-3d-inner p{
+    color:#a78bfa;
     font-size:13px;
-    font-weight:500;
+    line-height:1.4;
+    margin:0;
+    transform:translateZ(20px);
 }
 
-.skill-center{
-    grid-column:1 / 3;
-    width:calc(50% - 35px);
-    margin:0 auto;
-}
 
 /* ==========================
    Contact & Hover Animation
@@ -758,29 +811,16 @@ section h2{
          gap:18px;
     }
 
-    .skills-grid{
-        grid-template-columns:1fr;
-        gap:8px;
-        margin-top:25px;
+    .skills-grid-3d{
+        gap:16px;
     }
 
-   .skill-center{
-        grid-column:auto;
-        width:100%;
-        margin:0;
+    .card-3d{
+        flex:0 0 100%;
+        max-width:100%;
+        min-width:0;
+        height:180px;
     }
-
-   .skill-item{
-       padding:14px 4px;
-   }
-
-   .skill-item span{
-       font-size:15px;
-}
-
-.skill-item small{
-    font-size:12px;
-}
 
     .education-container {
         gap: 15px;
