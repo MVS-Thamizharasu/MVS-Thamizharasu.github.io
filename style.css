@@ -485,12 +485,12 @@ section h2{
     display:grid;
     grid-template-columns:repeat(25,1fr);
     column-gap:70px;
-    gap:25px;
-    margin-top:40px auto 0;
+    margin:40px auto 0;
     row-gap:28px;
 }
 
 .skill-item{
+    display:flex;
     border:1px solid rgba(255,255,255,.08);
     padding:12px 0;
     align-items:center;
