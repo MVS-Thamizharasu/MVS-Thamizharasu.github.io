@@ -98,24 +98,58 @@ if (topBtn) {
 // ==========================
 // Typing Effect (Hero Section)
 // ==========================
-const text = "MBA in Artificial Intelligence & Data Science";
-const typing = document.getElementById("typing-text");
+const words = [
+    "MBA Candidate (AI & DS)",
+    "Data Analytics Enthusiast",
+    "Business Intelligence Learner",
+    "Python & R Learner"
+];
 
-if (typing) {
-    typing.textContent = "";
-    let i = 0;
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-    function typeWriter() {
-        if (i < text.length) {
-            typing.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
-        }
+const typedElement = document.getElementById("typed");
+
+function typeEffect() {
+
+    if (!typedElement) return;
+
+    const currentWord = words[wordIndex];
+
+    if (isDeleting) {
+
+        typedElement.textContent =
+            currentWord.substring(0, charIndex - 1);
+
+        charIndex--;
+
+    } else {
+
+        typedElement.textContent =
+            currentWord.substring(0, charIndex + 1);
+
+        charIndex++;
     }
-    
-    // Page load அனிமேஷன் முடிந்த பிறகு டைப்பிங் துவங்க சிறிய டிலே (Delay)
-    setTimeout(typeWriter, 400); 
+
+    let typeSpeed = isDeleting ? 50 : 100;
+
+    if (!isDeleting && charIndex === currentWord.length) {
+
+        typeSpeed = 1500;
+        isDeleting = true;
+
+    } else if (isDeleting && charIndex === 0) {
+
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 500;
+    }
+
+    setTimeout(typeEffect, typeSpeed);
 }
+
+document.addEventListener("DOMContentLoaded", typeEffect);
 
 // ==========================
 // Console Message
