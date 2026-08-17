@@ -483,42 +483,36 @@ section h2{
 
 .skills-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(25,1fr);
+    column-gap:70px;
     gap:25px;
-    margin-top:40px;
+    margin-top:40px auto 0;
+    row-gap:28px;
 }
 
-.skill-card{
-    background:rgba(17,20,34,.75);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,.05);
-    border-radius:12px;
-    padding:30px;
-    text-align:center;
-    transition:.35s ease;
+.skill-item{
+    border:1px solid rgba(255,255,255,.08);
+    padding:12px 0;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.skill-card:hover{
-    transform:translateY(-5px);
-    border-color:#8b5cf6;
-    box-shadow:0 10px 25px rgba(139,92,246,.15);
-}
-.skill-card i{
-    font-size:42px;
-    color:#8b5cf6;
-    margin-bottom:18px;
-}
-.skill-card h3{
+.skill-item span{
     color:#ffffff;
-    font-size:20px;
-    margin-bottom:8px;
+    font-size:16px;
+    font-weight:500;
 }
 
-.skill-card small{
-    display:block;
+.skill-item small{
     color:#94a3b8;
-    font-size:14px;
+    font-size:13px;
     font-weight:500;
+}
+
+.skill-center{
+    grid-column:1 / 3;
+    width:calc(50% - 35px);
+    margin:0 auto;
 }
 
 /* ==========================
@@ -766,8 +760,27 @@ section h2{
 
     .skills-grid{
         grid-template-columns:1fr;
-        gap:18px;
+        gap:8px;
+        margin-top:25px;
     }
+
+   .skill-center{
+        grid-column:auto;
+        width:100%;
+        margin:0;
+    }
+
+   .skill-item{
+       padding:14px 4px;
+   }
+
+   .skill-item span{
+       font-size:15px;
+}
+
+.skill-item small{
+    font-size:12px;
+}
 
     .education-container {
         gap: 15px;
