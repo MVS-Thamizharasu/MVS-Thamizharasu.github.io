@@ -972,26 +972,56 @@ section h2{
     }
 
     .certifications-grid-3d{
-        gap:16px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 30px auto 0 !important;
     }
 
-    .cert-card-3d,
-    .certifications-grid-3d:has(> .cert-card-3d) .cert-card-3d,
-    .cert-card-3d:first-child:nth-last-child(n),
-    .cert-card-3d:first-child:nth-last-child(n) ~ .cert-card-3d{
-        flex: 0 0 100%;
-        max-width: 100%;
-        min-width: 0;
-        min-height:auto;
+    .cert-card-3d{
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        min-height: auto !important;
+        height: auto !important;
     }
 
     .cert-card-3d-inner{
-        padding:25px 20px;
+        width: 100% !important;
+        height: auto !important;
+        padding: 28px 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .cert-card-3d-inner i{
+        font-size: 34px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .cert-card-3d-inner h3{
+        font-size: 17px !important;
+        line-height: 1.4 !important;
+        margin: 0 0 6px 0 !important;
+        word-break: break-word !important;
+    }
+
+    .cert-card-3d-inner p{
+        font-size: 13.5px !important;
+        line-height: 1.5 !important;
+        margin: 0 0 12px 0 !important;
     }
 
     .cert-card-3d-inner .btn-primary{
-        width:100%;
-        justify-content:center;
+        width: 100% !important;
+        max-width: 260px !important;
+        justify-content: center !important;
+        padding: 12px 18px !important;
+        font-size: 14px !important;
+        box-sizing: border-box !important;
     }
 
     .skills-grid-3d{
@@ -1072,5 +1102,32 @@ section h2{
     .contact-box a{
         max-width:100%;
     } 
+
+    .certifications-grid-3d{
+        gap: 16px !important;
+        margin-top: 25px !important;
+    }
+
+    .cert-card-3d-inner{
+        padding: 24px 16px !important;
+    }
+
+    .cert-card-3d-inner i{
+        font-size: 30px !important;
+    }
+
+    .cert-card-3d-inner h3{
+        font-size: 16px !important;
+    }
+
+    .cert-card-3d-inner p{
+        font-size: 13px !important;
+    }
+
+    .cert-card-3d-inner .btn-primary{
+        max-width: 100% !important;
+        padding: 11px 16px !important;
+        font-size: 13.5px !important;
+    }
 
 }
