@@ -188,3 +188,32 @@ if (menuToggle && mobileMenu) {
     });
 
 }
+
+// ==========================
+// Education Card Animation
+// ==========================
+
+const educationCards = document.querySelectorAll(".edu-card");
+
+const educationObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry, index) => {
+
+        if (entry.isIntersecting) {
+
+            setTimeout(() => {
+                entry.target.classList.add("edu-show");
+            }, index * 180);
+
+            educationObserver.unobserve(entry.target);
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+educationCards.forEach(card => {
+    educationObserver.observe(card);
+});
