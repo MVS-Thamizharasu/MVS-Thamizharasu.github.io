@@ -2618,3 +2618,60 @@ section h2 {
         transform: none;
     }
 }
+/* =========================================================
+   FINAL DARK THEME TEXT FIX
+   ========================================================= */
+
+body:not(.light-theme) main h1,
+body:not(.light-theme) main h2,
+body:not(.light-theme) main h3,
+body:not(.light-theme) main h4,
+body:not(.light-theme) main h5,
+body:not(.light-theme) main h6 {
+    color: #f8fafc !important;
+}
+
+body:not(.light-theme) main p {
+    color: #cbd5e1 !important;
+}
+
+body:not(.light-theme) main .section-label,
+body:not(.light-theme) main .journey-content span,
+body:not(.light-theme) main .edu-content h4 {
+    color: #60a5fa !important;
+}
+
+body:not(.light-theme) main .college,
+body:not(.light-theme) main .edu-details,
+body:not(.light-theme) main .journey-content p,
+body:not(.light-theme) main .project-card > p,
+body:not(.light-theme) main .card-3d-inner p,
+body:not(.light-theme) main .cert-card-3d-inner p,
+body:not(.light-theme) main .github-info p,
+body:not(.light-theme) main .repo-card p,
+body:not(.light-theme) main .contact-text p {
+    color: #94a3b8 !important;
+}
+
+body:not(.light-theme) main .edu-tags span,
+body:not(.light-theme) main .project-tech span,
+body:not(.light-theme) main .github-tags span {
+    color: #cbd5e1 !important;
+}
+
+body:not(.light-theme) main .btn-primary,
+body:not(.light-theme) main .btn-secondary,
+body:not(.light-theme) main .filter-btn {
+    color: #ffffff !important;
+}
+
+/* Keep icons and accent elements visible */
+body:not(.light-theme) main i {
+    color: inherit;
+}
+
+/* Preserve gradient text */
+body:not(.light-theme) .logo-text,
+body:not(.light-theme) .hero h1 span {
+    color: transparent !important;
+}
